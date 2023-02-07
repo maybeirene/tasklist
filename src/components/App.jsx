@@ -7,7 +7,7 @@ import EmptyTasks from './EmptyTasks';
 function App() {
   const [tasks, setTasks] = useState([]);
 
-// console.log(tasks)
+
   const addTask = (task) => {
     let newTaskList = tasks.concat(task)
     setTasks(newTaskList)
