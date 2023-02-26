@@ -9,7 +9,7 @@ function App() {
 
 
   const addTask = (task) => {
-    let newTaskList = tasks.concat(task)
+    let newTaskList = tasks.concat({"title": task, "status": 0})
     setTasks(newTaskList)
   }
 
@@ -23,7 +23,9 @@ function App() {
   }
 
   const doneTask = (index) => {
-    console.log('donetask')
+    let newTaskList = tasks;
+    newTaskList[index].status = 1
+    setTasks(newTaskList) 
   }
 
   return (
